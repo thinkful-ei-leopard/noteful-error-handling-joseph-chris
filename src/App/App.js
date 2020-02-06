@@ -15,6 +15,20 @@ class App extends Component {
         folders: []
     };
 
+    // postFolder = (folderName) => {
+    //      This fuction will be responsible for adding the new folder to State.
+    //      It will need to be passed as a prop to the AddFolder component onto the button
+    //     fetch('http://localhost:9090/folders', {
+    //         method: 'POST',
+    //         headers: { 'Content-Type': 'application/json' },
+    //         body: {
+    //             "name": folderName
+    //         }
+    //     })
+    //         .then(response => response.json())
+    //         .then(newFolder => this.setState())
+    // }
+
     componentDidMount() {
         Promise.all([
             fetch(`${config.API_ENDPOINT}/notes`),
@@ -34,6 +48,8 @@ class App extends Component {
             .catch(error => {
                 console.error({error});
             });
+
+            
     }
 
     handleDeleteNote = noteId => {

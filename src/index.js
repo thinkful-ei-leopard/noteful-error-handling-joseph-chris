@@ -7,13 +7,15 @@ import {
 import { BrowserRouter } from 'react-router-dom'
 import 'typeface-roboto'
 import './index.css'
-import App from './App/App'
+// import App from './App/App'
+import AddFolder from './AddFolder/AddFolder'
 
 library.add(faPlus, faChevronLeft, faTrashAlt, faCheckDouble)
 
 ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+  // <BrowserRouter>
+  //   <App />
+  // </BrowserRouter>
+  <AddFolder />,
   document.getElementById('root')
 )
