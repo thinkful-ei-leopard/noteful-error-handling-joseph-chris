@@ -1,6 +1,14 @@
 import React from 'react';
 
 export default class AddFolder extends React.Component {
+    state = {
+        folderName: {value: ''}
+    };
+
+    setFolderName = (folderName) => {
+        
+    }
+
     postFolder = (folderName) => {
         fetch('http://localhost:9090/folders', {
             method: 'POST',
